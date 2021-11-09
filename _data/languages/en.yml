@@ -7,6 +7,8 @@ title:
   categories: Categories
   tags: Tags
   about: About
+  git: Git
+  instagram: Instagram
 
 author: Author
 
@@ -20,6 +22,8 @@ menu:
   schedule: Schedule
   sitemap: Sitemap
   commonweal: Commonweal 404
+  git: Git
+  instagram: Instagram
 
 sidebar:
   overview: Overview
