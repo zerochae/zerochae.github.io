@@ -48,7 +48,7 @@
                     <i class="fa fa-thumb-tack"></i>
                   </span>
                 {% endif %}
-                <a class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
+                <a  class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
                 {{ post.title | default: __.post.untitled }}
               </a>
             {% else %}{{ post.title }}{% endif %}
