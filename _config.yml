@@ -5,7 +5,7 @@
 
 # Site
 title: ZEROCODING
-subtitle:
+subtitle: 
 description:
 author: ZEROCHAE
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -90,10 +90,10 @@ rss:
 #since: 2015
 
 # icon between year and author @Footer
-authoricon: heart
+authoricon: moon 
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -168,7 +168,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: 
 
   # Global font settings used on <body> element.
   global:
@@ -186,7 +186,7 @@ font:
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    family: Lato
 
   # Font settings for Logo
   # Fallback to `global` font settings.
