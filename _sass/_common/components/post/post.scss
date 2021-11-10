@@ -39,6 +39,10 @@
   @include transform(rotate(30deg));
 }
 
+.post-body h3{
+  text-align:center;
+}
+
 @import "post-expand";
 @import "post-collapse";
 @import "post-type";
