@@ -38,7 +38,7 @@
                 </span>
               {% endif %}
               <a class="post-title-link post-title-link-external" target="_blank" href="{{ post.link }}" itemprop="url">
-                {% if post.title %}{{ post.title }}{% else %}{{  post.link }}{% endif %}
+                {% if post.title %}  {{ post.title }}{% else %}{{  post.link }}{% endif %}
                 <i class="fa fa-external-link"></i>
               </a>
             {% else %}
@@ -49,9 +49,9 @@
                   </span>
                 {% endif %}
                 <a  class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
-                {{ post.title | default: __.post.untitled }}
+                  📝 {{ post.title | default: __.post.untitled }}
               </a>
-            {% else %}{{ post.title }}{% endif %}
+            {% else %} 📝 {{ post.title }}{% endif %}
           {% endif %}
         </{% if site.seo %}h2{% else %}h1{% endif %}>
         {% endunless %}
