@@ -1,13 +1,12 @@
 <section id="posts" class="posts-collapse" hidden>
   <div class="collection-title">
     <{% if site.seo %}h2{% else %}h1{% endif %}>
-    {{ page.title }}
-    <small>{{  __.title.category  }}</small>
+    <small> {{  __.title.category  }} {{ page.title }} </small>
     </{% if site.seo %}h2{% else %}h1{% endif %}>
   </div>
 
   {% assign paginate = site.category.paginate | default: site.paginate  %}
-  {% assign paginate_path = site.category.paginate_path | default: site.paginate_path  %}
+  {% assign paginate_path = site.category.paginate_path | default: site.paginate_path %}
 
   {% for cat_posts in site.categories %}
     {% assign cat = cat_posts[0] | url_encode | replace: '+', '%20' %}
@@ -22,6 +21,10 @@
         {% endif %}
       {% endif %}
 
+      <!-- 추가-->
+
+      <!--추가 끝-->
+      
       {% include _macro/post-collapse.html %}
     {% endfor %}
   {% endfor %}

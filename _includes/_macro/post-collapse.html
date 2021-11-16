@@ -13,7 +13,9 @@
               {% if post.type == 'picture' %}
                 {{ post.content }}
               {% else %}
-                <span itemprop="name">{{ post.title | default: __.post.untitled }}</span>
+              <!-- 추가 -->
+                <span itemprop="name"> <h3> {{ post.title | default: __.post.untitled }} </h3>  <span> 📑 {{post.description}} </span> </span>
+              <!-- 추가 끝-->
               {% endif %}
             </a>
         {% endif %}

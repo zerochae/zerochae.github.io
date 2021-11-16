@@ -257,7 +257,7 @@
           {% unless site.excerpt_description and is_index %}
             {% if site.description %}
                 <div class="post-description">
-                    {{ post.description }}
+                 {{ post.description }}
                 </div>
             {% endif %}
           {% endunless %}
@@ -291,7 +291,7 @@
 
       {% if is_index %}
         {% if post.description and site.excerpt_description %}
-          {{ post.description }}
+           <h2 style="text-align: center;"> {{ post.description }} </h2> 
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ post.url | relative_url }}">
