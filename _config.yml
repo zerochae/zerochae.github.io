@@ -380,11 +380,11 @@ han: false
 #duoshuo_shortname:
 
 #utterances:
-utterces :
-  enable: true
-  repo: zerochae/zerochae.github.io.comments
-  issue-term: pathname
-  theme: github-light
+# utterances :
+#   enable: true
+#   repo: zerochae/zerochae.github.io.comments
+#   issue-term: pathname
+#   theme: github-light
 
 
 # Disqus
