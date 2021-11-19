@@ -357,6 +357,20 @@
             <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" rel="tag"># {{ tag }}</a>
           {% endfor %}
         </div>
+
+        <!-- utterances 댓글 시작-->
+        <hr>
+        <div>
+          <script src="https://utteranc.es/client.js"
+          repo="zerochae/zerochae.github.io.comments"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+        </div>
+        <!-- 댓글 끝-->
+
       {% endif %}
 
       {% unless is_index %}
@@ -428,4 +442,5 @@
         {% endunless %}
       {% endif %}
     </footer>
+
   </article>

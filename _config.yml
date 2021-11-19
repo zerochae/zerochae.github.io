@@ -379,6 +379,14 @@ han: false
 # Duoshuo ShortName
 #duoshuo_shortname:
 
+#utterances:
+utterces :
+  enable: true
+  repo: zerochae/zerochae.github.io.comments
+  issue-term: pathname
+  theme: github-light
+
+
 # Disqus
 disqus:
   enable: false
