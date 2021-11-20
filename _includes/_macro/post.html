@@ -38,7 +38,8 @@
                 </span>
               {% endif %}
               <a class="post-title-link post-title-link-external" target="_blank" href="{{ post.link }}" itemprop="url">
-                {% if post.title %}  {{ post.title }}{% else %}{{  post.link }}{% endif %}
+                {% if post.title %} 
+                {{ post.title }}{% else %}{{  post.link }}{% endif %}
                 <i class="fa fa-external-link"></i>
               </a>
             {% else %}
@@ -49,9 +50,31 @@
                   </span>
                 {% endif %}
                 <a  class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
-                  📝 {{ post.title | default: __.post.untitled }}
+                  <!-- 포스트 리스트 타이틀 앞에 티어 이미지 삽입 시작-->
+                <p> 
+                {% if post.b_tier %} 
+                <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
+                {% elsif post.p_tier%} 
+                <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
+                {% else %} 📝 
+                {% endif %} 
+                {{ post.title | default: __.post.untitled }}
+              </p>
+              <!-- 포스트 리스트 타이틀 앞에 티어 이미지 삽입 끝-->
               </a>
-            {% else %} 📝 {{ post.title }}{% endif %}
+                {% else %} 
+                <!-- 포스트 내용 헤더에 티어 이미지 삽입 시작 -->
+
+                {% if post.b_tier %} 
+                <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
+                {% elsif post.p_tier%} 
+                <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
+                {% else %} 📝 
+                {% endif %} 
+            
+            {{ post.title }}{% endif %}
+
+            <!-- 포스트 내용 헤더에 티어 이미지 삽입 끝 -->
           {% endif %}
         </{% if site.seo %}h2{% else %}h1{% endif %}>
         {% endunless %}
