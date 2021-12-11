@@ -53,10 +53,13 @@
                   <!-- 포스트 리스트 타이틀 앞에 티어 이미지 삽입 시작-->
                 <p> 
                 {% if post.b_tier %} 
-                <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
-                {% elsif post.p_tier%} 
-                <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
-                {% else %} 📝 
+                  <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
+                {% elsif post.p_tier %} 
+                  <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
+                {% elsif post.icon %} 
+                  <img class="framework-icon" src="/assets/images/{{post.icon}}.png" />
+                {% else %} 
+                  📝 
                 {% endif %} 
                 {{ post.title | default: __.post.untitled }}
               </p>
@@ -66,10 +69,13 @@
                 <!-- 포스트 내용 헤더에 티어 이미지 삽입 시작 -->
 
                 {% if post.b_tier %} 
-                <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
+                  <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
                 {% elsif post.p_tier%} 
-                <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
-                {% else %} 📝 
+                  <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
+                {% elsif post.icon %} 
+                  <img class="framework-icon" src="/assets/images/{{post.icon}}.png" />
+                {% else %} 
+                  📝 
                 {% endif %} 
             
             {{ post.title }}{% endif %}

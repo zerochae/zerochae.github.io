@@ -14,7 +14,19 @@
                 {{ post.content }}
               {% else %}
               <!-- 추가 -->
-                <span itemprop="name"> <h3> {{ post.title | default: __.post.untitled }} </h3>  <span> 📑 {{post.description}} </span> </span>
+                <span itemprop="name">  
+                  <h3> 
+                    {% if post.b_tier %} 
+                      <img class="post-tier-b-img" src="https://d2gd6pc034wcta.cloudfront.net/tier/{{ post.b_tier }}.svg" /> 
+                    {% elsif post.p_tier %} 
+                      <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
+                    {% elsif post.icon %} 
+                      <img class="framework-icon" src="/assets/images/{{ post.icon }}.png" />
+                    {% endif %} 
+                    {{ post.title | default: __.post.untitled }} 
+                  </h3>  
+                  <span> 📑 {{post.description}} </span> 
+                </span>
               <!-- 추가 끝-->
               {% endif %}
             </a>
