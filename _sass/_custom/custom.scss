@@ -12,6 +12,24 @@ h4 {
   transform: rotate(0.04deg);
 }
 
+::-webkit-scrollbar {
+  background-color: rgb(255, 255, 255) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-width: initial !important;
+  border-style: none !important;
+  border-color: initial !important;
+  border-image: initial !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(191, 191, 191) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgb(186, 186, 186) !important;
+  border-image: initial !important;
+}
+
 .post-tier-b-img {
   width: 28px;
   display: inline;
@@ -80,15 +98,22 @@ h4 {
   font-size: 15px;
 }
 
-.framework-icon{
-    display: inline-block;
-    vertical-align: bottom;
+.framework-icon {
+  display: inline-block;
+  vertical-align: bottom;
 }
 
-.post-title-link p a{
-border-bottom: none;
-}
-
-.post-title a{
+.post-title-link p a {
   border-bottom: none;
+}
+
+.post-title a {
+  border-bottom: none;
+}
+
+.code-variable {
+  padding: 3px 4px;
+  color: #232629;
+  background-color: #e1e6e9;
+  border-radius: 8px;
 }
