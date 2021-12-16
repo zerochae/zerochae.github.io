@@ -14,7 +14,10 @@
   line-height: $line-height-code-block;
 }
 
-pre, code { font-family: $code-font-family; }
+pre,
+code {
+  font-family: $code-font-family;
+}
 
 // code {
 //   padding: 2px 4px;
@@ -80,7 +83,9 @@ pre {
       float: right;
       color: $highlight-foreground;
 
-      &:hover { border-bottom-color: $highlight-foreground; }
+      &:hover {
+        border-bottom-color: $highlight-foreground;
+      }
     }
   }
 
@@ -99,9 +104,10 @@ pre {
     background-color: $highlight-background;
   }
 
-  .line { height: 20px; }
+  .line {
+    height: 20px;
+  }
 }
-
 
 .gutter {
   -webkit-user-select: none;
@@ -113,21 +119,39 @@ pre {
 .gist table {
   width: auto;
 
-  td { border: none; }
+  td {
+    border: none;
+  }
 }
 
-pre.highlight { padding: 10px; }
+pre.highlight {
+  padding: 10px;
+}
 
 // For diff highlight
-pre .deletion { background: $highlight-deletion; }
-pre .addition { background: $highlight-addition; }
-pre .meta     { color: $highlight-purple; }
+pre .deletion {
+  background: $highlight-deletion;
+}
+pre .addition {
+  background: $highlight-addition;
+}
+pre .meta {
+  color: $highlight-purple;
+}
 
 pre {
+  .c,
+  .cm,
+  .cp,
+  .c1,
+  .cs {
+    color: $highlight-comment;
+  }
 
-  .c, .cm, .cp, .c1, .cs { color: $highlight-comment; }
-
-  .nv, .vc, .vg, .vi,
+  .nv,
+  .vc,
+  .vg,
+  .vi,
   .na,
   .nt,
   .sr,
@@ -142,10 +166,19 @@ pre {
     color: $highlight-red;
   }
 
-  .m, .mf, .mh, .mi, .il, .mo, .mx, .mb,
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo,
+  .mx,
+  .mb,
   .cp,
-  .nb, .bp,
-  .l, .ld,
+  .nb,
+  .bp,
+  .l,
+  .ld,
   .params,
   .kc,
   .gp {
@@ -154,19 +187,37 @@ pre {
 
   .ruby .class .title,
   .css .rules .attribute,
-  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1, .ss,
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .s1,
+  .ss,
   .value,
   .inheritance,
   .header,
   .ruby .symbol,
   .xml .cdata,
   .special,
-  .m, .mf, .mh, .mi, .il, .mo, .mx, .mb,
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo,
+  .mx,
+  .mb,
   .formula {
     color: $highlight-green;
   }
 
-  .nc, .nf,
+  .nc,
+  .nf,
   .css .hexcolor {
     color: $highlight-aqua;
   }
@@ -182,9 +233,13 @@ pre {
     color: $highlight-blue;
   }
 
-  .k, .kd, .kn, .kp, .kr, .kt,
+  .k,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt,
   .javascript .function {
     color: $highlight-purple;
   }
-
 }

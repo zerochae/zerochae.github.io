@@ -26,13 +26,13 @@ $highlight_theme : jekyll-config("highlight_theme");
   $highlight-selection    : #424242 !global;
   $highlight-foreground   : #eaeaea !global;
   $highlight-comment      : #969896 !global;
-  $highlight-red          : #cc6666 !global;
-  $highlight-orange       : #ee6c08 !global;
+  $highlight-red          : #ea7177 !global;
+  $highlight-orange       : #ee8f46 !global;
   $highlight-yellow       : #e7c547 !global;
-  $highlight-green        : #8dc891 !global;
-  $highlight-aqua         : #e78c45 !global;
-  $highlight-blue         : #698ab5 !global;
-  $highlight-purple       : #9e7bb6 !global;
+  $highlight-green        : #c3e88d !global;
+  $highlight-aqua         : #fac863 !global;
+  $highlight-blue         : #82aaff !global;
+  $highlight-purple       : #c792ea !global;
   $highlight-gutter       : (
     color: scale-color($highlight-background, $lightness: 40%),
     bg-color: scale-color($highlight-background, $lightness: 16%)
