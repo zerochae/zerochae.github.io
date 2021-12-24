@@ -119,9 +119,14 @@ h4 {
 }
 
 .kd + .nx {
-  color: #82aaff
+  color: #82aaff;
 }
 
-span.p{
-  color:#89def3
+span.p {
+  color: #89def3;
+}
+@media (max-width: 767px) {
+  .post-body {
+    font-family: "Lato", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
 }
