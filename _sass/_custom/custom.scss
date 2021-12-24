@@ -133,12 +133,14 @@ span.p {
       font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
       padding :10px;
     }
-    td.code , td.gutter{
+    td.code{
       background-color: #282c34;
+    }
+    td.gutter{
+      background-color: #454c5a;
     }
     .gutter pre {
       padding-left: 10px;
-      height: 100%;
     }
   }
 
