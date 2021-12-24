@@ -195,7 +195,7 @@ font:
   # Fallback to `global` font settings.
   posts:
     external: true
-    family: Noto Sans KR
+    family: Lato
 
   # Font settings for Logo
   # Fallback to `global` font settings.
