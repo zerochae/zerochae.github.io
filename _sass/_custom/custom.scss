@@ -136,6 +136,9 @@ span.p {
     td.code , td.gutter{
       background-color: #282c34;
     }
+    .gutter pre {
+      padding-left: 10px;
+    }
   }
 
 }
