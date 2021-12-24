@@ -10,7 +10,14 @@ h2,
 h3,
 h4 {
   transform: rotate(0.04deg);
+  font-weight: 600;
 }
+
+h2{
+  font-style: italic;
+}
+
+
 
 ::-webkit-scrollbar {
   background-color: rgb(255, 255, 255) !important;
@@ -124,24 +131,4 @@ h4 {
 
 span.p {
   color: #89def3;
-}
-@media (max-width: 767px) {
-  .post-body {
-    // font-family: "Lato", "PingFang SC", "Microsoft YaHei", sans-serif;
-
-    pre.highlight {
-      // font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
-      // padding :10px;
-    }
-    td.code{
-      background-color: #282c34;
-    }
-    td.gutter{
-      // background-color: #454c5a;
-    }
-    // .gutter pre {
-    //   padding-left: 10px;
-    // }
-  }
-
 }
