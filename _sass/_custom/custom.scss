@@ -128,8 +128,14 @@ span.p {
 @media (max-width: 767px) {
   .post-body {
     font-family: "Lato", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+    pre.highlight {
+      font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+      padding :10px;
+    }
+    td.code , td.gutter{
+      background-color: #282c34;
+    }
   }
-  .highlight .gutter pre{
-    padding: 10px 0;
-  }
+
 }
