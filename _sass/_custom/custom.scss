@@ -135,11 +135,14 @@ span.p {
 
 
 @media (max-width: 767px){
-  td.code {
-    background-color: #282c34;
-  }
-  // test
-  pre.highlight{
-    padding : 10px;  
+
+  .post-body{
+    td.code {
+      background-color: #282c34;
+    }
+    // test
+    .highlight .code pre{
+      padding : 10px;  
+    }
   }
 }
