@@ -133,11 +133,13 @@ span.p {
   color: #89def3;
 }
 
-td.code {
-  background-color: #282c34;
-}
 
-// test
-pre.highlight{
-  padding : 10px;  
+@media (max-width: 767px){
+  td.code {
+    background-color: #282c34;
+  }
+  // test
+  pre.highlight{
+    padding : 10px;  
+  }
 }
