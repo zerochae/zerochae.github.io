@@ -134,7 +134,7 @@ menu:
   tags: /tags/
   git: https://github.com/zerochae/
   instagram: https://www.instagram.com/zerochae/
-  sitemap: /sitemap.xml
+  # sitemap: /sitemap.xml
   #commonweal: /404.html
 
 # Enable/Disable menu icons.
