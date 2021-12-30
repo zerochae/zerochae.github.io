@@ -13,11 +13,9 @@ h4 {
   font-weight: 600;
 }
 
-h2{
+h2 {
   font-style: italic;
 }
-
-
 
 ::-webkit-scrollbar {
   background-color: rgb(255, 255, 255) !important;
@@ -125,6 +123,10 @@ h2{
   border-radius: 5px;
 }
 
+ul, ol{
+  font-weight: 600;
+}
+
 .kd + .nx {
   color: #82aaff;
 }
@@ -133,23 +135,26 @@ span.p {
   color: #89def3;
 }
 
-code span{
+code span {
   font-weight: normal;
 }
 
-
-@media (max-width: 767px){
-
-  .post-body{
+@media (max-width: 767px) {
+  .post-body {
     td.code {
       background-color: #282c34;
     }
     // test
-    .highlight .code pre{
-      padding : 10px;  
+    .highlight .code pre {
+      padding: 10px;
     }
-    td.gutter pre{
+    td.gutter pre {
       height: 100%;
     }
   }
 }
+
+// iframe {
+//   border-right: solid 2px #000000;
+//   box-shadow: 0 2px 5px #000020;
+// }
