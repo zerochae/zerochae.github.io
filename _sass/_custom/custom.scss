@@ -10,11 +10,7 @@ h2,
 h3,
 h4 {
   transform: rotate(0.04deg);
-  font-weight: 600;
-}
-
-h2 {
-  font-style: italic;
+  // font-weight: 600;
 }
 
 ::-webkit-scrollbar {
@@ -124,7 +120,7 @@ h2 {
 }
 
 ul, ol{
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 .kd + .nx {
@@ -158,3 +154,22 @@ code span {
 //   border-right: solid 2px #000000;
 //   box-shadow: 0 2px 5px #000020;
 // }
+
+article .post-body h1 {
+  font-size : 46px;
+  font-weight: 700;
+}
+
+article .post-body h2{
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+article .post-body h3{
+  font-size: 26px;
+  text-align: left;
+  font-weight: 700;
+}
+
