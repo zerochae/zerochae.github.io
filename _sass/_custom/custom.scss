@@ -119,10 +119,6 @@ h4 {
   border-radius: 5px;
 }
 
-ul, ol{
-  // font-weight: 600;
-}
-
 .kd + .nx {
   color: #82aaff;
 }
@@ -158,6 +154,7 @@ code span {
 article .post-body h1 {
   font-size : 46px;
   font-weight: 700;
+  margin-bottom: 25px;
 }
 
 article .post-body h2{
@@ -166,10 +163,29 @@ article .post-body h2{
   font-weight: 700;
 }
 
+article .post-body ol {
+  margin-bottom: 25px;
+}
 
-article .post-body h3{
-  font-size: 26px;
+article .post-body ul {
+  margin-bottom: 25px;
+}
+
+
+.posts-expand .post-body h3{
+  font-size: 22px;
   text-align: left;
   font-weight: 700;
+  margin: 0 0 25px 0;
+  padding-top: 0;
 }
+
+.posts-expand .post-body h4{
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  padding-top: 0;
+}
+
 
