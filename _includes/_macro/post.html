@@ -378,6 +378,8 @@
       {% endunless %}
     </div>
 
+    <hr>
+
     <footer class="post-footer">
       {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
         <div class="post-tags">
@@ -388,8 +390,6 @@
         </div>
 
     <!-- utterances 댓글 시작-->
-    <hr>
-    <div>
       <script src="https://utteranc.es/client.js"
               repo="zerochae/zerochae.github.comments"
               issue-term="pathname"
@@ -397,7 +397,6 @@
               crossorigin="anonymous"
               async>
       </script>
-    </div>
     <!-- 댓글 끝-->
     
       {% endif %}
