@@ -381,6 +381,7 @@
     <footer class="post-footer">
       {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
         <div class="post-tags">
+          <hr />
           {% for tag in post.tags %}
             {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
             <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" rel="tag"># {{ tag }}</a>
