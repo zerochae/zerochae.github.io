@@ -2,7 +2,7 @@
 title: Browser Rendering
 date: 2022-01-06 09:00
 description: 브라우저 렌더링의 원리
-category: Computer Science
+category: ComputerScience
 tags: [Browser,Rendering,cs]
 ---
 
