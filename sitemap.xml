@@ -4,7 +4,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
     <url>
-    {% if site.url != null && post.url != null %}
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
@@ -23,7 +22,6 @@
       {% else %}
         <priority>{{ post.sitemap.priority }}</priority>
       {% endif %}
-    {% endif %}
     </url>
   {% endfor %}
 </urlset>
