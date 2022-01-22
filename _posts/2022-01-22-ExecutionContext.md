@@ -7,4 +7,4 @@ icon: js
 tags: [JavaScript]
 ---
 
-# 실행컨텍스트
+# 실행 컨텍스트
