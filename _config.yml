@@ -78,7 +78,7 @@ feed:
 ## Docs: https://help.github.com/articles/configuring-jekyll-plugins/
 plugins:
   - jemoji
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-feed
 
 # ---------------------------------------------------------------
