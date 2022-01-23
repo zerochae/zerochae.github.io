@@ -1,9 +1,10 @@
 ---
-title: Browser Rendering
+title: JavaScript &#35;1
 date: 2022-01-06 09:00
-description: 브라우저 렌더링의 원리
-category: ComputerScience
-tags: [Browser,Rendering,cs]
+description: Browser Rendering
+category: JavaScript
+icon: js
+tags: [JavaScript]
 ---
 
 ### Structure of Browser

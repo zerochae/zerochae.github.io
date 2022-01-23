@@ -1,7 +1,7 @@
 ---
-title: Pre InterView
+title: Essay &#35;1
 date: 2022-01-19 09:00
-description: 인터뷰 전 생각 정리
+description: Pre InterView
 category: Essay
 tags: [Think]
 ---

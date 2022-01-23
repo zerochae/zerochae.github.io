@@ -1,7 +1,7 @@
 ---
-title: Execution Context
+title: JavaScript &#35;3
 date: 2022-01-22 09:00
-description: 실행 컨텍스트
+description: Execution Context
 category: JavaScript
 icon: js
 tags: [JavaScript]
