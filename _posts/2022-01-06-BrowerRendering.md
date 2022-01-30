@@ -1,10 +1,9 @@
 ---
-title: JavaScript &#35;1
+title: FrontEnd &#35;1
 date: 2022-01-06 09:00
 description: Browser Rendering
-category: JavaScript
-icon: js
-tags: [JavaScript]
+category: FrontEnd
+tags: [FrontEnd,Web,Browser]
 ---
 
 ### Structure of Browser

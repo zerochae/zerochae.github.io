@@ -1,5 +1,5 @@
 ---
-title: JavaScript &#35;3
+title: JavaScript &#35;2
 date: 2022-01-22 09:00
 description: Execution Context
 category: JavaScript
