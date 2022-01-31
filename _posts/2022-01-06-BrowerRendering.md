@@ -3,7 +3,7 @@ title: FrontEnd &#35;1
 date: 2022-01-06 09:00
 description: Browser Rendering
 category: FrontEnd
-tags: [FrontEnd,Web,Browser]
+tags: [front-end,Web,Browser]
 ---
 
 ### Structure of Browser
