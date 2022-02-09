@@ -79,90 +79,19 @@ function useInterval(callback, delay) {
 
 #### Context API
 
-Global State Control을 위해 Context API를 사용하였다. 코드를 계속 추가해 나가다 보니, 심각한 오류를 발견하게 되었는데, Global State가 Update되면 하위 컴포넌트가 전부 렌더링 되는 것이였다. `Context.Provider`는 저장된 값이 변경되면 `UseContext(Context)`를 사용하는 컴포넌트도 같이 렌더링을 하기 때문이였다. 
+Global State Control을 위해 Context API를 사용하였다. 코드를 계속 추가해 나가다 보니, 심각한 문제에 직면했는데, Global State가 Update되면 하위 컴포넌트가 전부 렌더링 되는 것이였다. `Context.Provider`는 저장된 값이 변경되면 `UseContext(Context)`를 사용하는 컴포넌트도 같이 렌더링을 하기 때문이였다. Context API를 사용하기 위한 좋은 환경은 전역 State에서 Static한 Data를 하위 컴포넌트에 전달해줘야 할 때라고 생각했다.
 
-```jsx
-// 사용한 전역 state store / PDdata.js
+## Altudy
 
-const PDdata = (props) => {
-  const [OptionSetList, setOptionLIst] = useState([]);
-  const [ProductInfoList, setProductInfoLIst] = useState(PIData);
-  const [ProductInfoOrder, setProductInfoOrder] = useState([PIOrder]);
-  const [PDMileage, setPDMileage] = useState(true);
-  const [ProductImage, setProductImage] = useState(PDImage);
-  const [ETC, setETC] = useState(false);
-  const [PScontentBox, setPScontentBox] = useState(ProductSalesperiods);
-  const [PspState, setPspSate] = useState(PSPInfo);
-  const [ProductDelivery, setProductDelibery] = useState(PDInfo);
+[Altudy Repo🚀](https://github.com/zerochae/Altudy)
 
-  const PDdata = {
-    OptionSetData: {
-      state: OptionSetList,
-      setstate: setOptionLIst,
-    },
-    PIData: {
-      state: ProductInfoList,
-      setState: setProductInfoLIst,
-    },
-    PIOrder: {
-      state: ProductInfoOrder,
-      setState: setProductInfoOrder,
-    },
-    PDMileage: {
-      state: PDMileage,
-      setState: setPDMileage,
-    },
-    PDImage: {
-      state: ProductImage,
-      setState: setProductImage,
-    },
-    ETC: {
-      state: ETC,
-      setState: setETC,
-    },
-    PScontentBox: {
-      state: PScontentBox,
-      setState: setPScontentBox,
-    },
-    PspInfoState: {
-      state: PspState,
-      setState: setPspSate,
-    },
-    PDInfo: {
-      state: ProductDelivery,
-      setState: setProductDelibery,
-    },
-  };
+알고리즘 스터디 그룹을 개설하였다. 주변에 하나 둘 씩 코딩테스트를 준비하는 사람들이 늘어나기에, 같이 공부하자는 취지에서 만들게 되었다. 1일1커밋 , 주마다 공통문제 1개를 멤버 모두가 풀이하는것을 규칙으로 했다. 그 동안 혼자 공부를 하다가 스터디 그룹을 하니 이점이 많았다. 
 
-  return (
-    <PDcontext.Provider value={PDdata}>{props.children}</PDcontext.Provider>
-  );
-};
+- 다른 사람에게 설명을 해줄 경우, 내가 완벽하게 이해하고 있어야 하기 때문에 더욱 디테일하게 공부하게 되었다. 
+- 같은 문제를 다른 사람이 풀이한 코드를 보고, 생각의 범위를 넓히게 되었다.
 
-// App / index.js
+같은 문제라도 정말 풀이법은 다양하다. 생각치도 못한 다양한 풀이법들이 있었다. 나는 삼항 연산자를 연속해서 쓰는 등 가독성이 떨어지더라도 짧게 쓰는 것을 좋아했는데, 보기 힘들다는 그룹원이 있어, 이 점을 개선해야 겠다고 생각했다.
 
-const App = () => {
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <Nav />
-      <Main>
-        <PDdata>
-          <Topbar/>
-          <ProductSalesperiod />
-          <ProductInfo />
-          <PDOption/>
-          <ProductImage/>
-          <ProductInfoNotice/>
-          <ProductDelivery/>
-          <PDMileage/>
-          <ETC/>
-        </PDdata>
-     </Main>
-    </div>
-  );
-};
-export default App;
-```
+## TypeScript 
 
-이런 경험을 통해 Context API를 사용하기 위한 좋은 환경은 전역 State에서 Static한 Data를 하위 컴포넌트에 전달해줘야 할 때라고 생각했다.
+타입스크립트 공부를 시작하였다. 해보고 느낀점은 "그냥 자바잖아..?" 였다. 프로그래밍 입문을 자바로 시작한 나로써는 타입을 일일히 적어주는게 불편한 일 처럼 느껴지지 않았고, 오히려 편하게 느껴졌다. 아직 해야할게 더 많이 남아있지만 아직까진 특별한 어려움을 찾지 못하였다. 코드를 작성하고 컴파일하면서 오류를 캐치하기 때문에, 실수를 할 일도 적어졌다. 팀원들에게 의견을 묻고 다음 주 프로젝트에서 바로 적용할 예정이다.
