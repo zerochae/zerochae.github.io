@@ -54,12 +54,11 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 `Will install react-scripts@3.0.1, which is a breaking change` 라는 말이 보인다.
 
-`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 음.. 이 버전은 위에서 말한 사이의 버전과 맞지 않는데..? `craco`의 버전도 `6.3.0`에서 `5.9.0`으로 내려갔는데 이 버전의 `peer Dependency`는 모든 버전과 호환된다. 
+`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 음.. 이 버전은 위에서 말한 사이의 버전과 맞지 않는데..? `craco`의 버전도 `6.4.3`에서 `5.9.0`으로 내려갔는데 이 버전의 `react-scripts`의 모든 버전과 호환된다. 
 
 ![craco 5 9 0](https://user-images.githubusercontent.com/84373490/153703526-8588bb0d-284c-45ca-a8d9-8c1aafc1f178.jpg)
 
-처음부터 `craco@5.9.0` 을 설치했다면 모든게 해결 되었을 것 이다. 그리고 모든 버전 호환될거면 react-scripts의 버전이 아닌 craco의 버전을 이 것으로 바꾸면 끝날일인데.. 역시 모든 일은 생각대로 되지 않는다. 
-
+처음부터 `craco@5.9.0` 을 설치했다면 모든게 해결 되었을 것 이다. 그리고 모든 버전 호환될거면 `fix` 키워드를 입력할 때 적게 바꾸는 쪽으로 실행되면 좋을텐데.. react-scripts의 버전이 아닌 craco의 버전을 바꾸면 끝날일인데.. 역시 모든 일은 생각대로 되지 않는다. 
 
 어쨋든 등록되었으니, `npm audit fix --force` 를 입력하여 변경 사항을 실행시켜보자.(불안하다.) 
 
