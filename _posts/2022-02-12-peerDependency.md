@@ -32,7 +32,7 @@ tags: [Issue]
 
 우리는 `craco`를 설치하려고 했을 때 `carco`의 `peerDependencies` 항목의 `react-scripts ^4.0.0`이 필요하다고 했지만 프로젝트에는 `react-scripts 5.0.0`이기 때문에 오류가 발생한 것 이다.
 
-`npm VER.4 ~ 6` 까지는 `peerDependencies` 관련 이슈가 발생하면 오류가 아닌 경고만 출력했지만, 작년 21월 2월 `npm VER.7`이 출시되면서(현재는 `VER.8`) 오류가 발생하는것으로 변경되었다. 
+`npm VER.4 ~ 6` 까지는 `peerDependencies` 관련 이슈가 발생하면 오류가 아닌 경고를 출력했지만, 21월 2월 `npm VER.7`이 출시되면서(현재는 `VER.8`) 오류가 발생하는것으로 변경되었다. 
 
 ### force
 
@@ -40,7 +40,7 @@ tags: [Issue]
 
 ![force](https://user-images.githubusercontent.com/84373490/153630787-d53ebd82-7829-4038-babf-bee1b9c3766e.jpg)
 
-위 사진에서는 `react-scripts ^4.0.0`을 설치하려했지만 충돌이 발생하여 설치가 되지 않았는데, 이상하게 `craco`는 설치가 되었고 **프로젝트를 실행**시킬 수 있었다.여기서 만약 설치에 실패한다면 
+위 사진에서는 `react-scripts ^4.0.0`을 설치하려했지만 충돌이 발생하여 정상 완료 되지 않았는데, 이상하게 `craco`는 설치가 되었고 **프로젝트를 실행**시킬 수 있었다.여기서 만약 설치에 실패한다면 
 ```
 npm ERR! Fix the upstream dependency conflict, or retry
 npm ERR! this command with --force, or --legacy-peer-deps
@@ -54,9 +54,11 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 `Will install react-scripts@3.0.1, which is a breaking change` 라는 말이 보인다.
 
-`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 음.. 이 버전은 위에서 말한 사이의 버전과 맞지 않는데..? `craco`의 버전도 `6.4.3`에서 `5.9.0`으로 내려갔는데 이 버전의 `react-scripts`의 모든 버전과 호환된다. 
+`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 음.. `3.0.1`버전은 위에서 말한 사이의 버전과 맞지 않는데 왜 갑자기 등장하였을까? 그 이유는 `craco`의 버젼도 같이 `5.9.0`로 내려갔기 때문이다.
 
 ![craco 5 9 0](https://user-images.githubusercontent.com/84373490/153703526-8588bb0d-284c-45ca-a8d9-8c1aafc1f178.jpg)
+
+`craco@5.9.0`은 `react-scripts`의 모든 버전과 호환된다. 
 
 음.. 처음부터 `craco@5.9.0` 을 설치했다면 모든게 해결 되었을 것 이다. 
 
@@ -70,17 +72,17 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 음... 나는 `react-script` 하나를 바꾸고 싶었던 것 뿐인데.. 830개의 패키지가 추가되고 308개가 제거되고 369개가 바뀌었다고 한다. 
 
-그리고 다시 `npm audit`의 결과는 react-script의 `5.0.0`을 주요 변경 사항에 등록해놓았는데 이는 `5.0.0`버전을 `peer Dependency`로 하는 라이브러리가 있기 때문이다.
+그리고 다시 `npm audit`을 입력해보면 react-script의 `5.0.0`을 주요 변경 사항에 등록해놓았는데 이는 `5.0.0`버전을 `peer Dependency`로 하는 라이브러리가 있기 때문이다.
 
 ![result3](https://user-images.githubusercontent.com/84373490/153700848-2280accf-6f1c-457c-b084-926349e0ea38.jpg)
 
 어쨋든.. 의도한 대로(?) 버전이 바뀌어있다. 이제 실행하면 해보면
 
 ![실행안돼](https://user-images.githubusercontent.com/84373490/153699591-8c8863d2-de91-44cc-a793-34129239edb9.jpg)
+.
+**안된다.** 앞서 말한것처럼 다른부분에서 `react-script 5.0.0`을 필요로 하기 때문이다. 
 
-**안된다.** 이제 다른부분에서 `react-script 5.0.0`을 필요로 하기 때문이다. 
-
-어떻게 해야 하나 고민을 하다가 공식문서에서 해답을 찾을 수 있었다.
+어떻게 해야 하나 고민을 하다가 공식문서에서 해답을 찾을 수 있었다
 
 맨 처음 `craco`를 `--force` 키워드를 사용해 설치하고, `peerDependency`의 버전이 맞지 않았는데 run이 된 이유는 `craco`에서 react-script의 버전 커스텀을 지원하기 때문이였다. 이 기능은 `craco`가 버전업되면서 추가된 기능인것 같다. 그냥 `5.0.0` 버전에서도 사용 가능 하다는 말이다. 
 
