@@ -1,6 +1,6 @@
 ---
 title: Essay &#35;2
-description: 원티드 프리온보딩 프론트엔드 과정 1주차 회고
+description: Wanted PreOnBoarding FrontEnd Week 1
 date: 2022-01-30 09:00
 category: Essay
 tags: [Think]
