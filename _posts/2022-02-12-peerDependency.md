@@ -58,7 +58,7 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 ![craco 5 9 0](https://user-images.githubusercontent.com/84373490/153703526-8588bb0d-284c-45ca-a8d9-8c1aafc1f178.jpg)
 
-처음부터 `craco@5.9.0` 을 설치했다면 모든게 해결 되었을 것 이다. 그리고 모든 버전 호환될거면 `fix` 키워드를 입력할 때 적게 바꾸는 쪽으로 실행되면 좋을텐데.. react-scripts의 버전이 아닌 craco의 버전을 바꾸면 끝날일인데.. 역시 모든 일은 생각대로 되지 않는다. 
+음.. 처음부터 `craco@5.9.0` 을 설치했다면 모든게 해결 되었을 것 이다. 
 
 어쨋든 등록되었으니, `npm audit fix --force` 를 입력하여 변경 사항을 실행시켜보자.(불안하다.) 
 
@@ -74,7 +74,7 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 ![result3](https://user-images.githubusercontent.com/84373490/153700848-2280accf-6f1c-457c-b084-926349e0ea38.jpg)
 
-어쨋든.. 의도한 대로 버전이 바뀌어있다. 이제 실행하면 해보면
+어쨋든.. 의도한 대로(?) 버전이 바뀌어있다. 이제 실행하면 해보면
 
 ![실행안돼](https://user-images.githubusercontent.com/84373490/153699591-8c8863d2-de91-44cc-a793-34129239edb9.jpg)
 
@@ -82,7 +82,7 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 어떻게 해야 하나 고민을 하다가 공식문서에서 해답을 찾을 수 있었다.
 
-맨 처음 `craco`를 `--force` 키워드를 사용해 설치하고, `peerDependency`의 버전이 맞지 않았는데 run이 된 이유는 `craco`에서 react-script의 버전 커스텀을 지원하기 때문이였다. 그냥 `5.0.0` 버전에서도 사용 가능 하다는 말이다.
+맨 처음 `craco`를 `--force` 키워드를 사용해 설치하고, `peerDependency`의 버전이 맞지 않았는데 run이 된 이유는 `craco`에서 react-script의 버전 커스텀을 지원하기 때문이였다. 이 기능은 `craco`가 버전업되면서 추가된 기능인것 같다. 그냥 `5.0.0` 버전에서도 사용 가능 하다는 말이다. 
 
 ![cracoconfig](https://user-images.githubusercontent.com/84373490/153699678-5d4a61b7-e869-462e-aeba-85b80ad500e6.jpg)
 
@@ -98,4 +98,4 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 ## 결론
 
-위의 예에서는 버전 커스텀 덕분에 똑같은 결과를 보였지만, 만약 해당 이슈를 만난다면 `--force` 키워드 사용을 추천한다. 버전을 고정시키려는 시도가 있기 때문에 `--legacy-peer-deps` 키워드보다 엄격하다고 볼 수 있기 때문이다.
+처음 해당 이슈로 구글링을 하였을때 `craco`설치 시 `--legacy-peer-deps`를 입력하라는 글을 먼저 발견하였다. 그 이유는 위에서 말한 대로 버전 커스텀 덕분에 추가로 `dependency`를 설치할 필요가 없기 때문이다. 하지만 만약 다른 라이브러리 사용 시 해당 이슈를 만난다면 `--force` 키워드 사용을 추천한다. 버전을 고정시키려는 시도가 있기 때문에 `--legacy-peer-deps` 키워드보다 엄격하다고 볼 수 있기 때문이다.
