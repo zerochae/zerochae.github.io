@@ -10,7 +10,7 @@ tags: [Issue]
 
 ![Error](https://user-images.githubusercontent.com/84373490/153573779-801d3bb0-4fe0-4e9c-b04b-86b86ed67254.jpg)
 
-프로젝트 초기설정을 위해 `craco`를 설치하던 만난 에러.
+프로젝트 초기설정을 위해 `craco`를 설치하던 중 에러를 만났다.
 
 에러 메시지를 읽어보니 `craco` 설치를 위해서는 `react-scripts ^4.0.0`이 필요한데, 현재 프로젝트는 `react-scripts 5.0.0` 라는 버전 에러이다. 그리고 `--force`나 `--legacy-peer-deps` 키워드를 사용하면 해결할 수 있지만 잠재적으로 깨질 수 있지만 해결할 수 있다고 한다.
 
@@ -24,9 +24,7 @@ tags: [Issue]
 
 ![peer](https://user-images.githubusercontent.com/84373490/153626757-acc2be23-6b51-4bc5-b2fa-ee9b71709303.jpg)
 
-`react-scripts`의 버전 정보가 `^4.0.0` 으로 표기 되어있다. `caret(^)` 기호는 마이너 버젼의 지원을 의미한다. 
-
-즉 해당 버전은  3.0.0 <= version < 4.0 사이의 버전이다.  
+`react-scripts`의 버전 정보가 `^4.0.0` 으로 표기 되어있다. `caret(^)` 기호는 숫자의 개수, 0의 처음 위치에 따라 그 뜻이 달라지는데 여기서는 4.0.0 <= version < 5.0.0 사이의 버전(`4.*.*`)을 의미한다.  
 
 `dependency`는 내가 만든 모듈에서 사용하는 패키지를 지정하는 반면, `peerDependencies`는 반대로 내가 만든 모듈이 다른 모듈과 함께 동작할 수 있다는 호환성을 표시하는 것이다. 이런 것을 플러그인이라고 한다.
 
@@ -56,7 +54,7 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 `Will install react-scripts@3.0.1, which is a breaking change` 라는 말이 보인다.
 
-`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 이제 `npm audit fix --force` 를 입력하여 변경 사항을 실행시켜보자. 
+`react-scripts@3.0.1`를 설치하는 것이 주요 변경 사항에 등록되어 있다. 음.. 이 버전은 위에서 말한 사이의 버전과 맞지 않는데..? 어쨋든 등록되었으니, `npm audit fix --force` 를 입력하여 변경 사항을 실행시켜보자.(불안하다.) 
 
 ![fix1](https://user-images.githubusercontent.com/84373490/153698869-a34621ff-b125-486d-9b00-c3c9977f491b.jpg)
 
