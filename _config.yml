@@ -14,7 +14,7 @@ date_format: "%Y-%m-%d"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: https://zerochae.github.io
+url: "https://zerochae.github.io"
 baseurl:
 permalink: pretty
 
@@ -458,7 +458,7 @@ gitalk:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: "G-5KVEVZN99P"
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
