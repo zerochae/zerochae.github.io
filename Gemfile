@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
-group :jekyll_plugins do
-  gem 'github-pages'
-  gem 'jekyll-admin'
-end
+gem 'github-pages', group: :jekyll_plugins
+#gem 'jekyll-admin', group: :jekyll_plugins
 
 gem "webrick", "~> 1.7"
