@@ -79,7 +79,7 @@ feed:
 plugins:
   - jemoji
   - jekyll-admin
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-feed
 
 # ---------------------------------------------------------------
