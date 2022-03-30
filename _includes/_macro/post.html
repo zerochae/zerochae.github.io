@@ -58,6 +58,8 @@
                   <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
                 {% elsif post.icon %} 
                   <img class="framework-icon" src="/assets/images/{{post.icon}}.png" />
+                {% elsif post.category == 'CS' %} 
+                  💻
                 {% else %} 
                   📝 
                 {% endif %} 
@@ -74,6 +76,8 @@
                   <span class="post-tier-p-img-{{post.p_tier}}"> {{post.p_tier}} </span>
                 {% elsif post.icon %} 
                   <img class="framework-icon" src="/assets/images/{{post.icon}}.png" />
+                {% elsif post.category == 'CS' %} 
+                  💻
                 {% else %} 
                   📝 
                 {% endif %} 
