@@ -1,5 +1,5 @@
 ---
-title: FrontEnd &#35;1
+title: FrontEnd &#35;2
 date: 2022-04-07 09:00
 description: Storybook & TypeScript & cra
 category: FrontEnd
