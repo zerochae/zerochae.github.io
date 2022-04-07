@@ -1,0 +1,91 @@
+---
+title: FrontEnd &#35;1
+date: 2022-04-07 09:00
+description: Storybook & TypeScript & cra
+category: FrontEnd
+tags: [front-end]
+---
+
+React 와 Typescript를 이용한 프로젝트를 할 때, craco를 사용해 Alias를 설정하고 시작한다.
+
+```json
+// tsconfig.paths.json
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Constants/*": ["src/Constants/*"],
+      "Components/*": ["src/Components/*"],
+      "Utils/*": ["src/Utils/*"],
+      "Styles/*": ["src/Styles/*"],
+      "Types/*": ["src/Types/*"],
+      "Pages/*": ["src/Pages/*"],
+      "Store/*": ["src/Store/*"],
+      "Actions/*": ["src/Modules/Actions/*"],
+      "Reducers/*": ["src/Modules/Reducers/*"],
+      "Modules/*": ["src/Modules/*"],
+      "Assets/*": ["src/Assets/*"]
+    }
+  }
+}
+```
+
+```json
+//tsconfig.json
+{
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+    ...
+  },
+  "include": ["src", "tsconfig.paths.json", "src/custom.d.ts"]
+}
+```
+
+```js
+//craco.config.js
+const CracoAlias = require("craco-alias");
+
+module.exports = {
+  plugins: [
+    {
+      plugin: CracoAlias,
+      options: {
+        source: "tsconfig",
+        tsConfigPath: "tsconfig.paths.json",
+      },
+    },
+  ],
+};
+```
+
+기본 Alias를 설정하고 Storybook을 설치한다.
+
+```
+npx sb init
+```
+
+바로 stories에 Path Alias를 적용하면 보기 좋게 오류가 난다.
+
+스토리북은 별도의 빌드환경을 사용하기 대문에 `webpack` 설정이 따로 필요하다.
+
+```js
+//.storybook/main.js
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const path = require("path");
+
+module.exports = {
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: ...
+  ...
+  webpackFinal: async (config) => {
+    config.resolve.plugins.push(
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, "../tsconfig.json"),
+      })
+    );
+    return config;
+  },
+};
+```
+
+위 설정으로 storybook의 webpack에서 tsconfig의 Alias를 참조할 수 있다.
