@@ -1,6 +1,6 @@
 ---
 title: FrontEnd &#35;2
-date: 2022-04-07 09:00
+date: 2022-04-06 09:00
 description: Storybook & TypeScript & cra
 category: FrontEnd
 tags: [front-end]
