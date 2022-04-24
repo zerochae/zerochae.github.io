@@ -1,6 +1,6 @@
 ---
 title: JavaScript &#35;6
-date: 2022-04-23 09:00
+date: 2022-04-23 10:00
 description: n을 활용한 nodeJs 버전관리
 category: JavaScript
 icon: js
