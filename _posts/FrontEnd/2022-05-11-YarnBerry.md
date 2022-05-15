@@ -97,3 +97,36 @@ nodeLinker: node-modules
 ```shell
 yarn install or yarn
 ```
+
+### Use With Typescript 
+
+yarn berry의 PnP 기능을 사용할 때, Typescript가 작동하도록 추가적인 구성이 필요하다. 안전상의 이유로 VSCode에서는 사용자 지정 Typescript 설정을 명시적으로 활성화해야 한다.
+<br/>
+패키지들이 zip 아카이브로 관리되기 때문에 기존의 방식으로는 정상적으로 타입이 불러와지지 않는다.
+<br/>
+Editor SDK 설정을 하기 전에 먼저 VSCode에서  `zipfs`를 먼저 설치해줘야 한다.
+
+이 extension은 zip 아카이브에서 직접 파일을 읽을 수 있도록 VSCode 에 지원을 추가한다. 예를 들어 이 extension을 추가하지 않으면 import된 React와 같은 설치한 의존성 파일을 열어볼 수 없다.
+
+Editor SDK 설정은 Terminal에 다음과 같이 입력 사용할 수 있다.
+
+```shell
+yarn dlx @yarnpkg/sdks vscode
+```
+<br/>
+
+그 후 `.vscode`폴더와 `.yarn/sdks` 에 추가된 SDK를 확인할 수 있다. 이 때 `Zero-installs`를 사용하기 때문에 `.vscode`는 `.gitignore`에 추가하면 안 된다.
+
+<br/>
+
+추가적으로 `typescript plugin`을 import 시켜준다. 이 플로그인은 자체 types를 포함하지 않는 패키지를 추가할 때 `@types/` 패키지를 `package.json` 폴더에 종속성으로 자동으로 추가해준다. 이 플러그인 설치는 선택사항이지만 매우 유용하다.
+
+```shell
+yarn plugin import typescript
+```
+
+설치 후에는 `.yarn/plugins/@yarnpkg` 폴더 아래에 `plugin-typescript.cjs` 파일이 생성된다. 
+
+<br/>
+
+마지막으로 `command + shift + p`를 눌러 `typescript 버전 선택..` 을 검색해 `Use WorkSpace Version`을 선택해 Workspace의 Typescript sdk로 변경해준다. 
