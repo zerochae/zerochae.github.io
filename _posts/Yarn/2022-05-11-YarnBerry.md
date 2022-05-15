@@ -1,8 +1,9 @@
 ---
-title: FrontEnd &#35;2
+title: Yarn &#35;1
 date: 2022-05-10 09:00
 description: Yarn Berry
-category: FrontEnd
+category: Yarn
+icon: yarn
 tags: [front-end, Web, yarn, yarn-berry]
 ---
 
@@ -115,7 +116,7 @@ yarn dlx @yarnpkg/sdks vscode
 ```
 <br/>
 
-그 후 `.vscode`폴더와 `.yarn/sdks` 에 추가된 SDK를 확인할 수 있다. 이 때 `Zero-installs`를 사용하기 때문에 `.vscode`는 `.gitignore`에 추가하면 안 된다.
+그 후 `.vscode`폴더와 `.yarn/sdks` 에 추가된 SDK를 확인할 수 있다. 이 때 `Zero-installs`를 사용하기 때문에 `.vscode`는 `.gitignore`에 추가하면b 안 된다.
 
 <br/>
 
