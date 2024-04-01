@@ -3,10 +3,10 @@
 ## Docs: https://jekyllrb.com/docs/configuration/
 # ---------------------------------------------------------------
 # Site
-title: ZEROCHAE`S LOG
+title: GRAY_LOG
 subtitle:
-description: Junior Developer의 일기장
-author: ZEROCHAE
+description: 일기장
+author: Gray.Kwon
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 
 language: en
