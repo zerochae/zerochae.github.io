@@ -1,6 +1,8 @@
+# 작성중....
+
 # `ts-enum` 개발기록
 
-## 📌 1. 왜 만들었을까? 🤔  
+## 📌  왜 만들었을까? 🤔  
 나는 TypeScript를 사용하면서, **Java의 Enum** 같은 기능이 필요했다.  
 기본적인 `enum` 타입은 제공되지만, 다음과 같은 단점이 있었다.  
 
@@ -16,7 +18,7 @@
 
 ---
 
-## 📌 2. 어떻게 만들었을까? ⚙️  
+## 📌 어떻게 만들었을까? ⚙️  
 
 처음부터 직접 구현하려 했던 것은 아니었다.  
 기존에 [`class-enum`](https://github.com/banlife/class-enum)이라는 라이브러리가 있었고,  
@@ -37,23 +39,7 @@
 
 ---
 
-## 📌 3. 객체 기반 Enum
-
-기존 TypeScript의 `enum`은 런타임에서 사라지기 때문에,  
-객체처럼 사용할 수 없다는 점이 가장 큰 단점이었다.
-
-하지만 **객체 기반 Enum**을 만들면, 다음과 같은 장점이 있다.
-
-### ✅ **객체 기반 Enum의 장점**
-✔ **실제 값(value) 기반으로 동작** → 타입 안전성이 높아짐  
-✔ **런타임에서 유지됨** → 객체이므로 `console.log()`로 확인 가능  
-✔ **메서드 추가 가능** → `isActive()`, `toString()` 같은 기능 추가 가능  
-
-즉, `enum`의 간편함과 `class`의 유연함을 결합한 **최적의 방식**이라고 볼 수 있다.  
-
----
-
-## 📌 4. Base Enum class 만들기
+## 📌 Base Enum class 만들기
 
 공통 기능을 담고 있는 추상 클래스 Enum을 만들었다.
 
@@ -90,7 +76,7 @@ console.log(UserStatus.values()); // ✅ [UserStatus.ACTIVE, UserStatus.INACTIVE
 console.log(UserStatus.valueOf("ACTIVE")); // ✅ UserStatus.ACTIVE
 ```
 
-## 📌 5. class를 객체로 변환하는 `createEnum` 만들기  
+## 📌 class를 객체로 변환하는 `createEnum` 만들기  
 
 TypeScript에서 **클래스(Class)** 는 **Function 타입** 이기 때문에,  
 불필요한 함수(`apply`, `call`, `bind`, `prototype` 등)를 기본적으로 포함하고 있었다.  
@@ -100,6 +86,20 @@ TypeScript에서 **클래스(Class)** 는 **Function 타입** 이기 때문에,
 
 그래서 **`createEnum()` 함수를 만들어서, 클래스에서 불필요한 기능을 제거하고,  
 순수한 데이터 객체로 관리할 수 있도록 개선했다.**  
+
+---
+
+### ✅ 객체 기반 Enum
+
+기존 TypeScript의 `enum`은 런타임에서 사라지기 때문에,  
+객체처럼 사용할 수 없다는 점이 가장 큰 단점이었다.
+**객체 기반 Enum**을 만들면, 다음과 같은 장점이 있다.
+
+✔ **실제 값(value) 기반으로 동작** → 타입 안전성이 높아짐  
+✔ **런타임에서 유지됨** → 객체이므로 `console.log()`로 확인 가능  
+✔ **메서드 추가 가능** → `isActive()`, `toString()` 같은 기능 추가 가능  
+
+즉, `enum`의 간편함과 `class`의 유연함을 결합한 **최적의 방식**이라고 볼 수 있다.  
 
 ---
 
